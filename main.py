@@ -364,5 +364,5 @@ def generate_step():
     session['generate_status'] = status
     return jsonify({'success': True, 'step': step, 'result': result, 'elapsed': status[step]['elapsed'] if step in status else 0, 'all_status': status})
 
-if __name__ == '__main__':
-    app.run(debug=True)
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=8080)
